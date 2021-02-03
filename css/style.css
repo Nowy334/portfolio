@@ -1,0 +1,123 @@
+.about {
+  height: 110vh; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.6; }
+
+:root {
+  scrollbar-color: #fa6527 #131530 !important;
+  scrollbar-width: thin !important; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  background-color: #131530; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #fa6527; }
+
+#header {
+  height: 100vh;
+  width: 100%;
+  background-color: #131530;
+  overflow: hidden; }
+
+.wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: space-around;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 100%; }
+  .container__heading {
+    width: 50rem; }
+    .container__heading-text {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      margin-bottom: 2rem; }
+      .container__heading-text-primary {
+        display: block; }
+      .container__heading-text-name {
+        color: #fa6527; }
+  .container #markups {
+    height: 60rem;
+    width: auto;
+    fill: #fa6527;
+    z-index: 1; }
+
+.navigation {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out; }
+  .navigation__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50rem;
+    z-index: 100; }
+  .navigation__item {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500; }
+  .navigation__link {
+    text-decoration: none;
+    color: white;
+    padding: 0.2rem;
+    transition: color 0.3s ease-in-out; }
+    .navigation__link:hover {
+      color: #fa6527; }
+
+.sticky {
+  background-color: white;
+  box-shadow: 0 1px 5px rgba(59, 47, 47, 0.425);
+  position: fixed; }
+  .sticky-text {
+    color: #616161; }
+
+.heading-1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500; }
+
+.heading-1 {
+  font-size: 3.5rem; }
+
+.btn {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 1rem 1.2rem 1rem 1.2rem;
+  font-family: inherit;
+  font-size: 1.8rem;
+  transition: border-color 0.5s ease-in-out, background-color 0.5s ease-in-out; }
+  .btn:hover {
+    background-color: #fa6527;
+    border-color: #fa6527; }
+  .btn:focus {
+    outline: none; }

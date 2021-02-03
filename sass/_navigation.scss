@@ -1,0 +1,49 @@
+.navigation{
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+
+  &__list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50rem;
+    z-index: 100;
+  }
+
+  &__item{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    padding: 0.2rem;
+    transition: color 0.3s ease-in-out;
+
+    &:hover{
+      color: $color-secondary;
+    }
+
+  }
+}
+
+
+.sticky {
+  background-color: white;
+  box-shadow: 0 1px 5px rgba(59, 47, 47, 0.425);
+  position: fixed;
+
+  &-text{
+    color:$color-text;
+  }
+}
+
+
+

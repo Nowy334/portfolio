@@ -1,0 +1,29 @@
+%heading {
+  font-family: $font-primary;
+  font-weight: 500;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 3.5rem;
+}
+
+.btn {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 1rem 1.2rem 1rem 1.2rem;
+  font-family: inherit;
+  font-size: 1.8rem; 
+  transition: border-color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+
+  &:hover {
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+  }
+  &:focus{
+    outline: none;
+  }
+
+}
