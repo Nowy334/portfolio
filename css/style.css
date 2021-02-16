@@ -1,5 +1,108 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.6; }
+
+:root {
+  scrollbar-color: #fa6527 #131530 !important;
+  scrollbar-width: thin !important; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  background-color: #131530; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #fa6527; }
+
 .about {
-  height: 110vh; }
+  margin-top: 3rem;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .about__container-image {
+      display: block;
+      border-radius: 50%;
+      width: 30rem;
+      border-radius: 50%;
+      border-width: 2px;
+      padding: 0.7rem;
+      z-index: 2; }
+      .about__container-image-main {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      .about__container-image--border {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 31rem;
+        height: 31rem;
+        border-radius: 50%;
+        border: solid 0.5rem #fa6527; }
+        .about__container-image--border::before, .about__container-image--border::after {
+          content: "";
+          display: flex;
+          position: absolute;
+          background-color: #fff; }
+        .about__container-image--border::before {
+          height: 2rem;
+          width: 31.5rem; }
+        .about__container-image--border::after {
+          height: 31.5rem;
+          width: 2rem; }
+    .about__container-title {
+      margin: 3rem 0 2rem 0;
+      color: #444649;
+      font-size: 3rem; }
+    .about__container-text {
+      color: #444649;
+      font-size: 2rem;
+      max-width: 45%; }
+      .about__container-text span {
+        display: inline;
+        color: #fa6527; }
+    .about__container-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70rem;
+      z-index: 10; }
+      .about__container-icons svg {
+        width: 4rem;
+        height: 4rem;
+        transition: all 0.2s ease;
+        backface-visibility: hidden;
+        fill: #444649; }
+      .about__container-icons svg:hover {
+        transform: translateY(-6px); }
+      .about__container-icons .facebook:hover {
+        fill: #3b5998; }
+      .about__container-icons .github:hover {
+        fill: black; }
+      .about__container-icons .linkedin:hover {
+        fill: #0177B5; }
+      .about__container-icons--box {
+        margin: 4rem 3rem 2rem 3rem; }
 
 *,
 *::before,
@@ -94,18 +197,46 @@ body {
       color: #fa6527; }
 
 .sticky {
-  background-color: white;
-  box-shadow: 0 1px 5px rgba(59, 47, 47, 0.425);
-  position: fixed; }
+  background-color: #131530;
+  box-shadow: 0 1px 5px rgba(250, 101, 39, 0.425);
+  border-bottom: 0.5rem solid #fa6527;
+  position: fixed;
+  z-index: 100; }
   .sticky-text {
-    color: #616161; }
+    color: white; }
 
-.heading-1 {
+.active {
+  color: #fa6527; }
+
+.projects {
+  height: 100vh; }
+
+.heading-1, .heading-2, .heading-3 {
   font-family: "Raleway", sans-serif;
   font-weight: 500; }
 
 .heading-1 {
   font-size: 3.5rem; }
+
+.heading-2 {
+  font-size: 3rem; }
+
+.heading-3 {
+  font-size: 3.8rem;
+  margin-bottom: 4rem; }
+
+.heading {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #444649; }
+  .heading::after {
+    content: "";
+    display: block;
+    height: 0.3rem;
+    width: 8rem;
+    background-color: #444649;
+    align-items: center;
+    margin: 0 auto 0 auto; }
 
 .btn {
   background-color: transparent;
@@ -121,3 +252,78 @@ body {
     border-color: #fa6527; }
   .btn:focus {
     outline: none; }
+
+.skills {
+  height: 120vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr repeat(5, minmax(min-content, 20rem)) 1fr;
+  grid-template-rows: 13rem repeat(3, 1fr);
+  background-color: #131530;
+  overflow: hidden;
+  align-items: center;
+  justify-items: center; }
+  .skills__text {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    grid-column: 1 / -1;
+    grid-row: 1/ -1;
+    color: white;
+    height: 50rem;
+    font-size: 30vw;
+    margin-top: 10rem;
+    opacity: 0.03; }
+  .skills .wave-2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; }
+  .skills .circle-container {
+    position: relative;
+    width: 60em;
+    height: 60em;
+    padding: 0;
+    border-radius: 50%;
+    list-style: none;
+    margin: 12em auto 0;
+    grid-column: 1 / -1;
+    grid-row: 1/ -1; }
+    .skills .circle-container > * {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15em;
+      height: 15em;
+      margin: -7.5em; }
+      .skills .circle-container > *:nth-of-type(1) {
+        transform: rotate(0deg) translate(30em) rotate(0deg); }
+      .skills .circle-container > *:nth-of-type(2) {
+        transform: rotate(40deg) translate(30em) rotate(-40deg); }
+      .skills .circle-container > *:nth-of-type(3) {
+        transform: rotate(80deg) translate(30em) rotate(-80deg); }
+      .skills .circle-container > *:nth-of-type(4) {
+        transform: rotate(120deg) translate(30em) rotate(-120deg); }
+      .skills .circle-container > *:nth-of-type(5) {
+        transform: rotate(160deg) translate(30em) rotate(-160deg); }
+      .skills .circle-container > *:nth-of-type(6) {
+        transform: rotate(200deg) translate(30em) rotate(-200deg); }
+      .skills .circle-container > *:nth-of-type(7) {
+        transform: rotate(240deg) translate(30em) rotate(-240deg); }
+      .skills .circle-container > *:nth-of-type(8) {
+        transform: rotate(280deg) translate(30em) rotate(-280deg); }
+      .skills .circle-container > *:nth-of-type(9) {
+        transform: rotate(320deg) translate(30em) rotate(-320deg); }
+    .skills .circle-container .js {
+      width: 12em; }
+    .skills .circle-container .wordpress {
+      width: 13em; }
+    .skills .circle-container .vue {
+      width: 14em; }
+    .skills .circle-container img {
+      display: block;
+      max-width: 100%;
+      transition: .15s; }
+      .skills .circle-container img:hover, .skills .circle-container img:active {
+        transform: scale(1.1) translateY(-1rem); }

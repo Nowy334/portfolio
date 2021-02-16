@@ -1,3 +1,114 @@
+@import "base";
+
 .about {
-  height: 110vh;
-}
+  margin-top: 3rem;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-image{
+      display: block;
+      border-radius: 50%;
+      width: 30rem;
+      //border: dashed 3px $color-primary;
+      border-radius: 50%;
+      border-width: 2px;
+      padding: 0.7rem;
+      z-index: 2;
+      // background-image: linear-gradient(-90deg, $color-secondary 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(0deg,$color-secondary 50%, rgba(0, 0, 0, 0) 50%);
+
+      &-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &--border {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //position: relative;
+        position: absolute;
+        width: 31rem;
+        height: 31rem;
+        border-radius: 50%;
+        border: solid 0.5rem $color-secondary;
+
+        &::before, &::after {
+          content: "";
+          display: flex;
+          position: absolute;
+          background-color: #fff;
+        }
+
+        &::before {
+          height: 2rem;
+          width: 31.5rem;
+        }
+        &::after {
+          height: 31.5rem;
+          width: 2rem;
+        }
+      }
+
+    }
+    &-title{
+      margin: 3rem 0 2rem 0;
+      color: $color-text;
+      font-size: 3rem;
+    }
+    &-text{
+      color: $color-text;
+      font-size: 2rem;
+      max-width: 45%;
+      span {
+        display: inline;
+        color: $color-secondary;
+      }
+    }
+
+    &-icons{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 70rem;
+      z-index: 10;
+
+      svg {
+        width: 4rem;
+        height: 4rem;
+        transition: all 0.2s ease;
+        backface-visibility: hidden;
+        fill:$color-text;
+      }
+
+      svg:hover{
+        transform: translateY(-6px);
+      }
+
+      .facebook:hover {
+        fill:#3b5998;
+      }
+
+      .github:hover{
+        fill: black;
+      }
+
+      .linkedin:hover{
+        fill:#0177B5;
+      }
+
+      &--box {
+        margin: 4rem 3rem 2rem 3rem;
+      }
+    }
+  }
+
+} 

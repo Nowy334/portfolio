@@ -8,6 +8,33 @@
   font-size: 3.5rem;
 }
 
+.heading-2 {
+  @extend %heading;
+  font-size: 3rem;
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 3.8rem;
+  margin-bottom: 4rem;
+}
+
+.heading {
+  display: inline-block;
+    text-transform: uppercase;
+    color: $color-text;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0.3rem;
+      width: 8rem;
+      background-color: $color-text;
+      align-items: center;
+      margin: 0 auto 0 auto;
+    }
+}
+
 .btn {
   background-color: transparent;
   color: white;

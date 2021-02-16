@@ -36,13 +36,20 @@
 
 
 .sticky {
-  background-color: white;
-  box-shadow: 0 1px 5px rgba(59, 47, 47, 0.425);
+  background-color:$color-primary;
+  //box-shadow: 0 1px 5px rgba(59, 47, 47, 0.425);
+  box-shadow: 0 1px 5px rgba($color-secondary, 0.425);
+  border-bottom: 0.5rem solid $color-secondary;
   position: fixed;
+  z-index: 100;
 
   &-text{
-    color:$color-text;
+    color:white;  
   }
+}
+
+.active {
+  color: $color-secondary;
 }
 
 
