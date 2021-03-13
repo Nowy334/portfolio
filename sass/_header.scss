@@ -1,12 +1,9 @@
 #header {
   height: 100vh;
+  height: calc(var(--vh, 1vh) *100);
   width: 100%;
   background-color: $color-primary;
   overflow: hidden;
-
-  @include respond(phone){
-    height:92vh;
-  }
 }
 
 .wave{
@@ -14,7 +11,6 @@
   left:0;
   bottom: -1rem;
   width: 100%;
-  
 }
 
 .container {

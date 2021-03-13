@@ -81,12 +81,12 @@
     grid-column: 1 / -1;
     grid-row: 1/ -1;
   
-    @include respond(phone){
-      @include on-circle($item-count: 9, $circle-size: 35em, $item-size: 10em); 
-      margin: 4em 0 0 0;
-    }
     @include respond(low-screen){
-      @include on-circle($item-count: 9, $circle-size: 40em, $item-size: 10em);
+      @include on-circle($item-count: 9, $circle-size: 35em, $item-size: 10em);
+    }
+    @include respond(phone){
+      @include on-circle($item-count: 9, $circle-size: 31em, $item-size: 10em); 
+      margin: 4em 0 0 0;
     }
     
     .js{

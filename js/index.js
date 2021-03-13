@@ -1,4 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 //navigation
 const nav = document.querySelector(".navigation");
 const header = document.querySelector("#header");
@@ -154,11 +158,11 @@ let projects = gsap.timeline({
   }
 });
 
-projects.from('.headline-2',{y:-35, opacity:0, duration:2})
+projects.from('.headline-2',{y:-35, opacity:0, duration:2}, 0)
         .from('.projects__item-1', {x:-35, opacity:0, duration:2}, 0)
         .from('.projects__item-2', {x:35, opacity:0, duration:2}, 0)
         .from('.projects__item-3', {x:-35, opacity:0, duration:2}, 0)
-        .from('.projects__item-4', {x:35, opacity:0, duration:2}, 0);
+        .from('.projects__item-4', {x:35, opacity:0, duration:2}, 0); 
 
 
 let contact = gsap.timeline({

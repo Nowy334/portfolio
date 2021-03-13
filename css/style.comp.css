@@ -37,11 +37,13 @@ body {
   background-color: #fa6527; }
 
 .about {
+  margin-top: -5rem;
   height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  background-color: white;
   z-index: 100; }
   @media only screen and (max-width: 37.5em) {
     .about {
@@ -51,6 +53,8 @@ body {
   @media only screen and (max-height: 53.125em) {
     .about {
       height: 100%; } }
+  .about .headline-1 {
+    padding-top: 5rem; }
   .about__container {
     display: flex;
     flex-direction: column;
@@ -226,12 +230,10 @@ footer {
 
 #header {
   height: 100vh;
+  height: calc(var(--vh, 1vh) *100);
   width: 100%;
   background-color: #131530;
   overflow: hidden; }
-  @media only screen and (max-width: 37.5em) {
-    #header {
-      height: 92vh; } }
 
 .wave {
   position: absolute;
@@ -643,15 +645,14 @@ footer {
         transform: rotate(280deg) translate(30em) rotate(-280deg); }
       .skills .circle-container > *:nth-of-type(9) {
         transform: rotate(320deg) translate(30em) rotate(-320deg); }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-height: 53.125em) {
       .skills .circle-container {
         position: relative;
         width: 35em;
         height: 35em;
         padding: 0;
         border-radius: 50%;
-        list-style: none;
-        margin: 4em 0 0 0; }
+        list-style: none; }
         .skills .circle-container > * {
           display: block;
           position: absolute;
@@ -678,14 +679,15 @@ footer {
             transform: rotate(280deg) translate(17.5em) rotate(-280deg); }
           .skills .circle-container > *:nth-of-type(9) {
             transform: rotate(320deg) translate(17.5em) rotate(-320deg); } }
-    @media only screen and (max-height: 53.125em) {
+    @media only screen and (max-width: 37.5em) {
       .skills .circle-container {
         position: relative;
-        width: 40em;
-        height: 40em;
+        width: 31em;
+        height: 31em;
         padding: 0;
         border-radius: 50%;
-        list-style: none; }
+        list-style: none;
+        margin: 4em 0 0 0; }
         .skills .circle-container > * {
           display: block;
           position: absolute;
@@ -695,23 +697,23 @@ footer {
           height: 10em;
           margin: -5em; }
           .skills .circle-container > *:nth-of-type(1) {
-            transform: rotate(0deg) translate(20em) rotate(0deg); }
+            transform: rotate(0deg) translate(15.5em) rotate(0deg); }
           .skills .circle-container > *:nth-of-type(2) {
-            transform: rotate(40deg) translate(20em) rotate(-40deg); }
+            transform: rotate(40deg) translate(15.5em) rotate(-40deg); }
           .skills .circle-container > *:nth-of-type(3) {
-            transform: rotate(80deg) translate(20em) rotate(-80deg); }
+            transform: rotate(80deg) translate(15.5em) rotate(-80deg); }
           .skills .circle-container > *:nth-of-type(4) {
-            transform: rotate(120deg) translate(20em) rotate(-120deg); }
+            transform: rotate(120deg) translate(15.5em) rotate(-120deg); }
           .skills .circle-container > *:nth-of-type(5) {
-            transform: rotate(160deg) translate(20em) rotate(-160deg); }
+            transform: rotate(160deg) translate(15.5em) rotate(-160deg); }
           .skills .circle-container > *:nth-of-type(6) {
-            transform: rotate(200deg) translate(20em) rotate(-200deg); }
+            transform: rotate(200deg) translate(15.5em) rotate(-200deg); }
           .skills .circle-container > *:nth-of-type(7) {
-            transform: rotate(240deg) translate(20em) rotate(-240deg); }
+            transform: rotate(240deg) translate(15.5em) rotate(-240deg); }
           .skills .circle-container > *:nth-of-type(8) {
-            transform: rotate(280deg) translate(20em) rotate(-280deg); }
+            transform: rotate(280deg) translate(15.5em) rotate(-280deg); }
           .skills .circle-container > *:nth-of-type(9) {
-            transform: rotate(320deg) translate(20em) rotate(-320deg); } }
+            transform: rotate(320deg) translate(15.5em) rotate(-320deg); } }
     .skills .circle-container .js {
       width: 12em; }
       @media only screen and (max-width: 37.5em) {
