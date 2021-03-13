@@ -17,8 +17,11 @@
         <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
         <li class="navigation__item"><a href="#skills" class="navigation__link">Skills</a></li>
         <li class="navigation__item"><a href="#portfolio" class="navigation__link">Portfolio</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+        <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
       </ul>
+      <div class="menu-btn">
+        <div class="menu-btn__hamburger"></div>
+      </div>
     </nav>
 
     <div class="container">
@@ -28,7 +31,7 @@
           <span class="container__heading-text-primary">I'm a frontend web developer.</span>
         </h1>
 
-        <button class="btn">View my work</button>
+        <a href="#portfolio" class="btn">View my work</a>
       </div>
   
       <svg id="markups" width="523" height="523" viewBox="0 0 523 523" xmlns="http://www.w3.org/2000/svg">
@@ -108,8 +111,69 @@
 
     </section>
     <section id="portfolio" class="projects">
-      <h3 class="heading heading-3">portfolio</h3>
+      <h3 class="heading headline-2 heading-3">portfolio</h3>
+      <div class="projects__item projects__item-1">
+        <img class="projects__item-img" src="img/katya.png" alt="katya">
+        <div class="projects__item-btn">
+          <a class="btn-project projects__item-btn--live-nocode" href="https://katya-rg.eu/" target="_blank">live</a>
+        </div>
+      </div>
+      <div class="projects__item projects__item-2">
+        <img class="projects__item-img" src="img/notes.png" alt="notes">
+        <div class="projects__item-btn">
+          <a class="btn-project projects__item-btn--live" href="https://nowy334.github.io/Notes-board/" target="_blank">live</a>
+          <a class="btn-project projects__item-btn--code" href="https://github.com/Nowy334/Notes-board" target="_blank">code</a>
+        </div>
+      </div>
+      <div class=" projects__item projects__item-3">
+        <img class="projects__item-img" src="img/covid.png" alt="">
+        <div class="projects__item-btn">
+          <a class="btn-project projects__item-btn--live" href="https://nowy334.github.io/covid-tracker/" target="_blank">live</a>
+          <a class="btn-project projects__item-btn--code" href="https://github.com/Nowy334/covid-tracker" target="_blank">code</a>
+        </div>
+      </div>
+      <div class="projects__item projects__item-4">
+        <img class="projects__item-img" src="img/business.png" alt="">
+        <div class="projects__item-btn">
+          <a class="btn-project projects__item-btn--live" href="https://www.piotrcieszkowski.pl/" target="_blank">live</a>
+          <a class="btn-project projects__item-btn--code" href="https://github.com/Nowy334/Business-Coach" target="_blank">code</a>
+        </div>
+      </div>
     </section>
+    <section id="contact" class="contact">
+      <h3 class="heading headline-3 heading-3">Contact</h3>
+      <div class="contact__mail">
+        <a class="contact__mail-link" href="mailto:newwebsdesign@gmail.com">newwebsdesign@gmail.com</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="about__container-icons">
+        <div class="about__container-icons--box">
+          <a href="https://www.facebook.com/krzysztof.nowak.7587">
+            <svg class="facebook">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+         </a>
+        </div>
+        
+        <div class="about__container-icons--box">
+          <a href="https://github.com/Nowy334">
+            <svg class="github">
+              <use xlink:href="img/sprite.svg#icon-github"></use>
+            </svg>
+          </a>  
+        </div>
+
+        <div class="about__container-icons--box">
+          <a href="https://www.linkedin.com/in/krzysztof-nowak-inf/">
+            <svg class="linkedin">
+              <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <span class="copyright" >Krzysztof Nowak <span class="copyright__date">&copy;2021</span></span>
+    </footer>
 
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>

@@ -4,12 +4,39 @@ $color-secondary:#fa6527;
 $color-third: #00c3fe;
 $color-text: #444649;
 $font-primary: 'Raleway', sans-serif; 
+$color-footer: #0e1024;
 
 
 $bp-largest: 75em;  //1200px / 16 = 75 em
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px
 $bp-small: 37.5em; // 600px
+
+
+@mixin respond($breakpoint){
+  @if $breakpoint == low-screen{
+    @media only screen and (max-height: 53.125em) { @content };
+  }
+  @if $breakpoint == phone {
+      @media only screen and (max-width: 37.5em) { @content }; //600px
+  }
+  @if $breakpoint == tab-port {
+      @media only screen and (max-width: 56.25em) { @content }; //900px
+  }
+  @if $breakpoint == tab-port-max {
+    @media only screen and (max-width: 68.75em) { @content }; //1100px
+}
+  @if $breakpoint == tab-land {
+      @media only screen and (max-width: 75em) { @content }; //1200px
+  }
+  @if $breakpoint == netbook {
+    @media only screen and (max-width: 80.625em) { @content }; //1290px
+  }
+  @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 112.5em) { @content };//1800px
+  }
+}
+
 
 *,
 *::before,
@@ -22,6 +49,17 @@ $bp-small: 37.5em; // 600px
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  @include respond(tab-land){
+    font-size: 56.25%; //1rem = 9px; 9/16
+}
+
+@include respond(tab-port){
+    font-size: 50%; //1rem = 8px; 8/16 = 5-%
+}
+
+@include respond(big-desktop){
+    font-size: 65%; //1rem = 12px; 12/16 = 75%
+}
 }
 
 body {

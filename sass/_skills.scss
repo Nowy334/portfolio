@@ -9,6 +9,13 @@
   align-items: center;
   justify-items: center;
 
+  @include respond(phone){
+    height: 95vh;
+  }
+  @include respond(low-screen){
+    height: 100vh;
+  }
+
 
   &__text{
     position: absolute;
@@ -21,13 +28,16 @@
     font-size: 30vw;
     margin-top: 10rem;
     opacity: 0.03; 
+    @include respond(phone){
+      margin-top: 2rem;
+    }
   }
 
   .wave{
     &-2{
       position: absolute;
       left:0;
-      top: 0;
+      top: -0.5rem;
       width: 100%;
     }
   }
@@ -70,15 +80,41 @@
     margin: 12em auto 0;
     grid-column: 1 / -1;
     grid-row: 1/ -1;
+  
+    @include respond(phone){
+      @include on-circle($item-count: 9, $circle-size: 35em, $item-size: 10em); 
+      margin: 4em 0 0 0;
+    }
+    @include respond(low-screen){
+      @include on-circle($item-count: 9, $circle-size: 40em, $item-size: 10em);
+    }
     
     .js{
       width:12em;
+      @include respond(phone){
+        width: 8em;
+      }
+      @include respond(low-screen){
+        width: 8em;
+      }
     }
     .wordpress {
       width: 13em;
+      @include respond(phone){
+        width: 9em;
+      }
+      @include respond(low-screen){
+        width: 9em;
+      }
     }
     .vue {
       width: 14em;
+      @include respond(phone){
+        width: 9em;
+      }
+      @include respond(low-screen){
+        width: 9em;
+      }
     }
 
     img { 

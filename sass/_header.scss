@@ -3,13 +3,18 @@
   width: 100%;
   background-color: $color-primary;
   overflow: hidden;
+
+  @include respond(phone){
+    height:92vh;
+  }
 }
 
 .wave{
   position: absolute;
   left:0;
-  bottom: 0;
+  bottom: -1rem;
   width: 100%;
+  
 }
 
 .container {
@@ -21,8 +26,26 @@
   align-items: center;
   width:100%;
 
+  @include respond(tab-port){
+    grid-template-columns: 1fr;
+    grid-template-rows:10rem repeat(2, 30vh);
+    align-content: end;
+  }
+
   &__heading{
     width: 50rem;
+
+    @include respond(netbook){
+      margin-left: 10rem;
+    }
+    @include respond(tab-port){
+      margin-left: 0;
+      grid-row: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
 
     &-text{
       display: flex;
@@ -45,5 +68,9 @@
     width: auto;
     fill:$color-secondary;
     z-index: 1;
+    @include respond(tab-port){
+      height: 60rem;
+      grid-row: 2 / 3;
+    }
   }
 }

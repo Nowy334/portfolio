@@ -1,11 +1,21 @@
 @import "base";
 
 .about {
-  margin-top: 3rem;
+  //margin-top: 3rem;
   height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  z-index: 100;
+  @include respond(phone){
+    height: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  @include respond(low-screen){
+    height: 100%;
+  }
 
   
   &__container{
@@ -72,6 +82,11 @@
         display: inline;
         color: $color-secondary;
       }
+
+      @include respond(phone){
+        max-width: 68%;
+        text-align: center;
+      }
     }
 
     &-icons{
@@ -79,7 +94,10 @@
       justify-content: center;
       align-items: center;
       width: 70rem;
-      z-index: 10;
+      z-index: 11;
+      @include respond(phone){
+        width: 100%;
+      }
 
       svg {
         width: 4rem;

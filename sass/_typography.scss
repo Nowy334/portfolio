@@ -6,6 +6,9 @@
 .heading-1 {
   @extend %heading;
   font-size: 3.5rem;
+  @include respond(phone){
+    font-size: 3rem;
+  }
 }
 
 .heading-2 {
@@ -37,6 +40,7 @@
 
 .btn {
   background-color: transparent;
+  text-decoration: none;
   color: white;
   cursor: pointer;
   border: 1px solid white;
@@ -48,6 +52,28 @@
   &:hover {
     background-color: $color-secondary;
     border-color: $color-secondary;
+  }
+  &:focus{
+    outline: none;
+  }
+
+}
+
+.btn-project {
+  background-color: transparent;
+  color: $color-secondary;
+  cursor: pointer;
+  border: 2.5px solid $color-secondary;
+  padding: 0.3rem 2rem 0.3rem 2rem;
+  font-family: inherit;
+  font-size: 2.4rem; 
+  font-weight: 500;
+  transition: border-color 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
+  &:hover {
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: white;
   }
   &:focus{
     outline: none;

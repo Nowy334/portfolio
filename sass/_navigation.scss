@@ -13,12 +13,33 @@
     justify-content: space-around;
     width: 50rem;
     z-index: 100;
+
+    @include respond(phone){
+      position: absolute;
+      right: 0px;
+      height: 50vh;
+      top: 40px;
+      background: $color-primary;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.5s, opacity 0.5s, transform 0.5s;
+      box-shadow: 0 1px 5px rgba($color-secondary, 0.425);
+      border-bottom: 0.5rem solid $color-secondary;
+    }
   }
 
   &__item{
     font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 500;
+
+    @include respond(phone){
+      font-size: 2rem;
+    }
   }
 
   &__link {
@@ -33,7 +54,6 @@
 
   }
 }
-
 
 .sticky {
   background-color:$color-primary;
@@ -51,6 +71,74 @@
 .active {
   color: $color-secondary;
 }
+
+.menu-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  z-index:100;
+  display: none;
+
+  @include respond(phone){
+    display: flex;
+    transform: translateX(18rem);
+  }
+}
+
+.menu-btn__hamburger{
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__hamburger::before,
+.menu-btn__hamburger::after{
+  content:'';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__hamburger::before{
+  transform: translateY(-8px);
+}
+
+.menu-btn__hamburger::after{
+  transform: translateY(8px);
+}
+
+.open .menu-btn__hamburger{
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.open .menu-btn__hamburger::before{
+  transform: rotate(45deg) translate(35px, -35px);
+
+}
+
+.open .menu-btn__hamburger::after{
+  transform: rotate(-45deg) translate(35px, 35px);
+  
+}
+
+.nav-active{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+
+
 
 
 
