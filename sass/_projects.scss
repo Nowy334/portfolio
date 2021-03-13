@@ -14,14 +14,13 @@
 
   @include respond(tab-port-max){
     gap:4rem;
-    height: 80vh;
+    height: 100%;
   }
 
   @include respond(tab-port){
     grid-template-columns: 1fr minmax(min-content, 10rem) 1fr;
     grid-template-rows: 12rem repeat(4,min-content);
     height: 100%;
-    margin-bottom: 10rem;
   }
 
   .headline-2 {
@@ -41,6 +40,9 @@
     height: 30rem;
     width:auto;
     position: relative;
+    @include respond(low-screen){
+      height: 25rem;
+    }
     @include respond(netbook){
       height: 25rem;
     }

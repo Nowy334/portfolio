@@ -36,6 +36,9 @@
       border-width: 2px;
       padding: 0.7rem;
       z-index: 2;
+      @include respond(low-screen-min){
+        width: 25rem;
+      }
       // background-image: linear-gradient(-90deg, $color-secondary 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(0deg,$color-secondary 50%, rgba(0, 0, 0, 0) 50%);
 
       &-main{
@@ -54,6 +57,11 @@
         height: 31rem;
         border-radius: 50%;
         border: solid 0.5rem $color-secondary;
+
+        @include respond(low-screen-min){
+          width: 26rem;
+          height: 26rem;
+        }
 
         &::before, &::after {
           content: "";
@@ -91,6 +99,9 @@
         max-width: 68%;
         text-align: center;
       }
+      @include respond(low-screen-min){
+        font-size: 2rem;
+      }
     }
 
     &-icons{
@@ -98,7 +109,7 @@
       justify-content: center;
       align-items: center;
       width: 70rem;
-      z-index: 11;
+      z-index: 100;
       @include respond(phone){
         width: 100%;
       }

@@ -3,6 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+
 //navigation
 const nav = document.querySelector(".navigation");
 const header = document.querySelector("#header");
@@ -57,7 +58,12 @@ function clickHandler(e) {
     });
 
   }else if(href === "#about"){
-    let setTopPortfolio = offsetTop-90;
+    let setTopPortfolio;
+    if(window.screen.width < 600 || window.screen.height < 800 ) {
+      setTopPortfolio = offsetTop-20;
+    }else {
+      setTopPortfolio = offsetTop-90;
+    }
 
     scroll({
       top: setTopPortfolio,

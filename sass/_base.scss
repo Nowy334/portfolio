@@ -14,8 +14,11 @@ $bp-small: 37.5em; // 600px
 
 
 @mixin respond($breakpoint){
+  @if $breakpoint == low-screen-min{
+    @media only screen and (max-height: 40.625em) { @content }; // 650px
+  }
   @if $breakpoint == low-screen{
-    @media only screen and (max-height: 53.125em) { @content };
+    @media only screen and (max-height: 53.125em) { @content }; //850px
   }
   @if $breakpoint == phone {
       @media only screen and (max-width: 37.5em) { @content }; //600px

@@ -68,6 +68,9 @@ body {
       border-width: 2px;
       padding: 0.7rem;
       z-index: 2; }
+      @media only screen and (max-height: 40.625em) {
+        .about__container-image {
+          width: 25rem; } }
       .about__container-image-main {
         display: flex;
         justify-content: center;
@@ -81,6 +84,10 @@ body {
         height: 31rem;
         border-radius: 50%;
         border: solid 0.5rem #fa6527; }
+        @media only screen and (max-height: 40.625em) {
+          .about__container-image--border {
+            width: 26rem;
+            height: 26rem; } }
         .about__container-image--border::before, .about__container-image--border::after {
           content: "";
           display: flex;
@@ -107,12 +114,15 @@ body {
         .about__container-text {
           max-width: 68%;
           text-align: center; } }
+      @media only screen and (max-height: 40.625em) {
+        .about__container-text {
+          font-size: 2rem; } }
     .about__container-icons {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 70rem;
-      z-index: 11; }
+      z-index: 100; }
       @media only screen and (max-width: 37.5em) {
         .about__container-icons {
           width: 100%; } }
@@ -174,7 +184,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-  @media only screen and (max-height: 53.125em) {
+  @media only screen and (max-height: 40.625em) {
     footer {
       height: 100%; } }
   footer .facebook,
@@ -182,7 +192,7 @@ footer {
   footer .linkedin {
     fill: white; }
   footer .copyright {
-    margin-top: 2rem;
+    margin: 2rem 0 2rem 0;
     color: white;
     font-size: 1.5rem;
     text-align: center; }
@@ -372,13 +382,12 @@ footer {
   @media only screen and (max-width: 68.75em) {
     .projects {
       gap: 4rem;
-      height: 80vh; } }
+      height: 100%; } }
   @media only screen and (max-width: 56.25em) {
     .projects {
       grid-template-columns: 1fr minmax(min-content, 10rem) 1fr;
       grid-template-rows: 12rem repeat(4, min-content);
-      height: 100%;
-      margin-bottom: 10rem; } }
+      height: 100%; } }
   .projects .headline-2 {
     grid-column: 2 / 4;
     align-self: end;
@@ -397,6 +406,9 @@ footer {
     border-radius: 2rem;
     overflow: hidden;
     backface-visibility: hidden; }
+    @media only screen and (max-height: 53.125em) {
+      .projects__item {
+        height: 25rem; } }
     @media only screen and (max-width: 80.625em) {
       .projects__item {
         height: 25rem; } }
@@ -570,7 +582,8 @@ footer {
     position: absolute;
     left: 0;
     top: -0.5rem;
-    width: 100%; }
+    width: 100%;
+    z-index: 1; }
   .skills .circle-container {
     position: relative;
     width: 60em;
