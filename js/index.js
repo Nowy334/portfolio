@@ -62,7 +62,7 @@ function clickHandler(e) {
     if(window.screen.width < 600 || window.screen.height < 800 ) {
       setTopPortfolio = offsetTop-20;
     }else {
-      setTopPortfolio = offsetTop-90;
+      setTopPortfolio = offsetTop-40;
     }
 
     scroll({
