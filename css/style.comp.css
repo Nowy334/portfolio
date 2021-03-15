@@ -422,7 +422,7 @@ footer {
       .projects__item {
         height: 20rem; } }
     .projects__item:hover > img {
-      filter: blur(10px);
+      filter: blur(8px);
       background-color: rgba(19, 21, 48, 0.5);
       transform: scale(1.02); }
     .projects__item:hover .projects__item-btn {
@@ -432,7 +432,7 @@ footer {
     .projects__item-img {
       height: 100%;
       width: auto;
-      transition: 0.5s -webkit-filter linear, transform 0.5s ease-in-out; }
+      transition: filter 0.5s linear, transform 0.5s ease-in-out; }
     .projects__item-1 {
       grid-column: 2 / 3;
       grid-row: 2; }
