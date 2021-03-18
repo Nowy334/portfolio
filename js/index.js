@@ -188,7 +188,7 @@ let footer = gsap.timeline({
   }
 });
 
-footer.from(".footer .about__container-icons--box", {y:50, opacity:0, duration:1.5})
+footer.from(".footer .about__container-icons--box", {y:30, opacity:0, duration:1.5})
 
 
 
