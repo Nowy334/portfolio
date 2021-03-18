@@ -48,8 +48,8 @@ body {
   @media only screen and (max-width: 37.5em) {
     .about {
       height: 100%;
-      margin-top: 5rem;
-      margin-bottom: 5rem; } }
+      margin-top: 0;
+      margin-bottom: 0; } }
   @media only screen and (max-height: 53.125em) {
     .about {
       height: 100%; } }
@@ -121,8 +121,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 70rem;
-      z-index: 100; }
+      width: 70rem; }
       @media only screen and (max-width: 37.5em) {
         .about__container-icons {
           width: 100%; } }
@@ -201,8 +200,8 @@ footer {
       font-size: 1.5rem; }
 
 #header {
-  height: 100vh;
-  height: calc(var(--vh, 1vh) *100);
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) *100);
   width: 100%;
   background-color: #131530;
   overflow: hidden; }

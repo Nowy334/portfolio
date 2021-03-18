@@ -122,9 +122,9 @@ const all = document.querySelector("#markups")
 const heading = document.querySelector(".container__heading")
 
 const tl = new TimelineMax()
-  .from(slash, 0.9, {y:-600})
-  .from(left, 0.9, {x:-400, opacity: 0})
-  .from(right, 0.9, {x:400, opacity: 0})
+  .from(slash, 0.8, {y:-600})
+  .from(left, 0.8, {x:-400, opacity: 0})
+  .from(right, 0.8, {x:400, opacity: 0})
   .staggerFromTo(heading, 1, {scale:0.8, opacity:0},
     {scale:1, opacity:1}, 1, "-=1");
 
@@ -140,12 +140,12 @@ const tl2 = new TimelineMax({delay:3, repeat: -1 })
       start: "center bottom"
     }
   });
-  about.from(".about__container-image", {scale: 0.4, opacity:0, duration: 2})
-       .from(".about .about__container-icons--box", {y:100, opacity:0, duration:2}, 0)
+  about.from(".about__container-image", {scale: 0.4, opacity:0, duration: 1.5})
+       .from(".about .about__container-icons--box", {y:30, opacity:0, duration:1.5}, 0)
        .from(".about__container-title", {x:200, opacity:0, duration:2}, 0)
        .from(".about__container-text", {x:200, opacity:0, duration:2}, 0)
-       .from(".about__container-image--border", {rotation:360, opacity:0, duration:2}, 0)
-       .from(".headline-1", {y:-50, opacity:0, duration:2}, 0);
+       .from(".about__container-image--border", {rotation:360, opacity:0, duration:1.5}, 0)
+       .from(".headline-1", {y:-50, opacity:0, duration:1.5}, 0);
 
   
 let skills = gsap.timeline({
@@ -155,7 +155,7 @@ let skills = gsap.timeline({
   }
 });
 
-skills.from(".circle-container-element", {transform:"translate3d(0, 0, 0)", duration: 2});
+skills.from(".circle-container-element", {transform:"translate3d(0, 0, 0)", duration: 1.5});
 
 let projects = gsap.timeline({
   scrollTrigger: {
@@ -164,11 +164,11 @@ let projects = gsap.timeline({
   }
 });
 
-projects.from('.headline-2',{y:-35, opacity:0, duration:2}, 0)
-        .from('.projects__item-1', {x:-35, opacity:0, duration:2}, 0)
-        .from('.projects__item-2', {x:35, opacity:0, duration:2}, 0)
-        .from('.projects__item-3', {x:-35, opacity:0, duration:2}, 0)
-        .from('.projects__item-4', {x:35, opacity:0, duration:2}, 0); 
+projects.from('.headline-2',{y:-35, opacity:0, duration:1.5}, 0)
+        .from('.projects__item-1', {x:-35, opacity:0, duration:1.5}, 0)
+        .from('.projects__item-2', {x:35, opacity:0, duration:1.5}, 0)
+        .from('.projects__item-3', {x:-35, opacity:0, duration:1.5}, 0)
+        .from('.projects__item-4', {x:35, opacity:0, duration:1.5}, 0); 
 
 
 let contact = gsap.timeline({
@@ -178,8 +178,8 @@ let contact = gsap.timeline({
   }
 });
 
-contact.from('.headline-3',{y:-50, opacity:0, duration:2})
-       .from(".contact__mail", {scale: 0.4, opacity:0, duration: 2}, 0)
+contact.from('.headline-3',{y:-50, opacity:0, duration:1.5})
+       .from(".contact__mail", {scale: 0.4, opacity:0, duration: 1.5}, 0)
 
 let footer = gsap.timeline({
   scrollTrigger: {
@@ -188,7 +188,7 @@ let footer = gsap.timeline({
   }
 });
 
-footer.from(".footer .about__container-icons--box", {y:50, opacity:0, duration:2})
+footer.from(".footer .about__container-icons--box", {y:50, opacity:0, duration:1.5})
 
 
 
