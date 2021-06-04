@@ -367,10 +367,9 @@ footer {
   transform: translateX(0); }
 
 .projects {
-  height: 100vh;
   display: grid;
   grid-template-columns: 1fr repeat(2, minmax(min-content, 20rem)) 1fr;
-  grid-template-rows: 12rem repeat(2, min-content);
+  grid-template-rows: 12rem repeat(3, min-content);
   justify-items: center;
   align-items: center;
   gap: 7rem;
@@ -455,6 +454,13 @@ footer {
         .projects__item-4 {
           grid-column: 2 / 3;
           grid-row: 5; } }
+    .projects__item-5 {
+      grid-column: 2 / 3;
+      grid-row: 4; }
+      @media only screen and (max-width: 56.25em) {
+        .projects__item-5 {
+          grid-column: 2 / 3;
+          grid-row: 6; } }
     .projects__item-btn {
       visibility: hidden;
       opacity: 0;

@@ -1,8 +1,8 @@
 .projects {
-  height: 100vh;
+  //height: 100vh;
   display: grid;
   grid-template-columns: 1fr repeat(2, minmax(min-content, 20rem)) 1fr;
-  grid-template-rows: 12rem repeat(2,min-content);
+  grid-template-rows: 12rem repeat(3,min-content);
   justify-items: center;
   align-items: center;
   gap: 7rem;
@@ -107,6 +107,15 @@
       @include respond(tab-port){
         grid-column:2 / 3 ;
         grid-row: 5;
+      }
+    }
+
+    &-5{
+      grid-column:2 / 3 ;
+      grid-row: 4;
+      @include respond(tab-port){
+        grid-column:2 / 3 ;
+        grid-row: 6;
       }
     }
 

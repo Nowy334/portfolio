@@ -168,7 +168,8 @@ projects.from('.headline-2',{y:-35, opacity:0, duration:1.5}, 0)
         .from('.projects__item-1', {x:-35, opacity:0, duration:1.5}, 0)
         .from('.projects__item-2', {x:35, opacity:0, duration:1.5}, 0)
         .from('.projects__item-3', {x:-35, opacity:0, duration:1.5}, 0)
-        .from('.projects__item-4', {x:35, opacity:0, duration:1.5}, 0); 
+        .from('.projects__item-4', {x:35, opacity:0, duration:1.5}, 0)
+        .from('.projects__item-5', {x:-35, opacity:0, duration:1.5}, 0); 
 
 
 let contact = gsap.timeline({
